@@ -55,11 +55,18 @@ public class Credit {
             long cardNumber = input.nextLong();
             long evenSum = getEvenSum(cardNumber);
             long oddSum = getOddSum(cardNumber);
-            if(isValidCard(evenSum, oddSum)){
-                System.out.println("Valid Card");
-            }else{
+
+            // Add validation for minimum card number length
+            if (String.valueOf(cardNumber).length() > 13) {
+                if(isValidCard(evenSum, oddSum)){
+                    System.out.println("Valid Card");
+                }else{
+                    System.out.println("Invalid Card");
+                }
                 System.out.println("Invalid Card");
             }
+
+            
             while(true){
                 // only allow given options
                 // prevent negative numbers
