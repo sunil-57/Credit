@@ -63,6 +63,7 @@ public class Credit {
                 }else{
                     System.out.println("Invalid Card");
                 }
+            }else{
                 System.out.println("Invalid Card");
             }
 
